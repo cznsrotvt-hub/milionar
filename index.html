@@ -23,7 +23,7 @@
 <div id="formBox" style="display:none;">
     <p><b>Otázka:</b> Seřaď od nejdříve k nejpozději:<br>A) Večeře<br>B) Oběd<br>C) Snídaně<br>D) Svačina</p>
 
-    <label>Odpověď (např. A-D-C-B):</label><br>
+    <label>Odpověď (např. ADCB):</label><br>
     <input id="odpoved"><br><br>
 
     <button onclick="submitAnswer()">Odeslat</button>
@@ -47,7 +47,7 @@ function submitAnswer() {
     let jmeno = document.getElementById("jmeno").value;
     let odpoved = document.getElementById("odpoved").value.trim().toUpperCase();
 
-    let spravna = "C-B-D-A";
+    let spravna = "CBDA";
     let ok = (odpoved === spravna);
 
     document.getElementById("formBox").style.display = "none";
